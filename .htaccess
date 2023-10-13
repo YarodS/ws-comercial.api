@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !index.php
+## if the request is not for a valid file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ server.php [NC,L]
